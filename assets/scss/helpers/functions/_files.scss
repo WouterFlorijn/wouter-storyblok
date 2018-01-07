@@ -1,0 +1,3 @@
+@function node-module($path) {
+  @return quote('../../' + $path);
+}
