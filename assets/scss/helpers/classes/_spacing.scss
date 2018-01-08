@@ -1,0 +1,23 @@
+@each $size in $sizes {
+  $i: index($sizes, $size);
+
+  .spaced-h-#{$i} {
+    &:not(:first-of-type) {
+      margin-left: $size / 2;
+    }
+    &:not(:last-of-type) {
+      margin-right: $size / 2;
+    }
+  }
+  .spaced-v-#{$i} {
+    &:not(:first-of-type) {
+      margin-top: $size / 2;
+    }
+    &:not(:last-of-type) {
+      margin-bottom: $size / 2;
+    }
+  }
+  .spaced-#{$i} {
+    @extend .spaced-h-#{$i}, .spaced-v-#{$i};
+  }
+}

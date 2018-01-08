@@ -1,0 +1,71 @@
+@keyframes bubble-v {
+  from {
+    top: -1rem;
+  }
+  to {
+    top: 1rem;
+  }
+}
+@keyframes bubble-h {
+  from {
+    left: -1rem;
+  }
+  to {
+    left: 1rem;
+  }
+}
+
+.bubble {
+  @extend .round;
+
+  position: relative;
+  display: inline-block;
+  width: 8rem;
+  height: 8rem;
+
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  background-color: $blue-dark;
+
+  animation: bubble-v 3s, bubble-h 5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  transition: all $transition-time $transition-function;
+
+  &:nth-child(2) {
+    animation-delay: -1s;
+  }
+  &:nth-child(3) {
+    animation-delay: -5.5s;
+  }
+  &:nth-child(4) {
+    animation-delay: -4s;
+  }
+  &:nth-child(5) {
+    animation-delay: -2.5s;
+  }
+
+  &:hover {
+    transform: scale(1.25);
+  }
+}
+
+.bubble-text {
+  position: absolute;
+  top: calc(100% + 1rem);
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+
+  text-align: center;
+  font-size: 1rem;
+
+  opacity: 0;
+
+  transition: opacity $transition-time $transition-function;
+
+  .bubble:hover & {
+    opacity: 1;
+  }
+}

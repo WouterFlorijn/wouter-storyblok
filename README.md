@@ -1,6 +1,6 @@
-# wouter
+# Wouter
 
-> Nuxt.js project
+Wouter Florijn Development
 
 ## Build Setup
 

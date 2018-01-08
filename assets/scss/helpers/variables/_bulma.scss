@@ -1,19 +1,36 @@
 @import '~bulma/sass/utilities/initial-variables';
 @import '~bulma/sass/utilities/functions';
 
-$turqoise: #19B2FF;
-$blue: #3091F2;
-$green: #3DCC55;
-$yellow: #FFBA19;
-$red: #F23630;
+$blue: #19B2FF;
+$blue-dark: #1994FF;
+$red: #F34A30;
+$red-dark: #E62E34;
+$green: #64CC1F;
+$green-dark: #37B324;
+$yellow: #F5B41D;
+$yellow-dark: #F59F1D;
 
-$primary: $turqoise;
-$info: $blue;
+$black:        #000000;
+$black-bis:    #101010;
+$black-ter:    #202020;
+
+$grey-darker:  #404040;
+$grey-dark:    #606060;
+$grey:         #808080;
+$grey-light:   #A0A0A0;
+$grey-lighter: #C0C0C0;
+
+$white-ter:    #E0E0E0;
+$white-bis:    #F0F0F0;
+$white:        #FFFFFF;
+
+$primary: $blue;
+$info: $blue-dark;
 $success: $green;
 $warning: $yellow;
 $danger: $red;
 $light: $white-ter;
-$dark: $grey-darker;
+$dark: $black-ter;
 
 $primary-invert: findColorInvert($primary);
 $info-invert: findColorInvert($info);
@@ -22,6 +39,18 @@ $warning-invert: findColorInvert($warning);
 $danger-invert: findColorInvert($danger);
 $light-invert: findColorInvert($light);
 $dark-invert: findColorInvert($dark);
+
+$background: $light;
+
+$border: $light;
+$border-hover: $light;
+
+// Text colors
+
+$text: $dark;
+$text-invert: findColorInvert($text);
+$text-light: $light;
+$text-strong: $dark;
 
 @import '~bulma/sass/utilities/derived-variables';
 

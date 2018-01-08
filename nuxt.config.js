@@ -8,6 +8,9 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src: '//app.storyblok.com/f/storyblok-latest.js' }
     ]
   },
   loading: { color: '#3B8070' },
@@ -30,5 +33,9 @@ module.exports = {
   },
   css: [
     '~/assets/scss/app.scss'
+  ],
+  plugins: [
+    '~/plugins/components',
+    '~/plugins/storyblok'
   ]
 }
